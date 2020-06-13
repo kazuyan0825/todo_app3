@@ -2,9 +2,9 @@
 <%= form_for @task do |f| %>
   <p>
     <%= f.label :title %> <br>
-    <%= f.text_field :tittle %>
+    <%= f.text_field :title %>
     <% if @task.errors.any? %>
-      <%= @task.errors.messages[:tittle][0] %>
+      <%= @task.errors.messages[:title][0] %>
     <% end %>
   </p>
   <p>
