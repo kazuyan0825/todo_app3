@@ -52,3 +52,10 @@ production:
   database: todo_app3_production
   username: todo_app3
   password: <%= ENV['TODO_APP3_DATABASE_PASSWORD'] %>
+
+production:
+
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
