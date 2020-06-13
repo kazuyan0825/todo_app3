@@ -3,7 +3,7 @@
   <% @tasks.each do |task| %>
     <li>
       <%= check_box_tag '','', task.done, {'data-id' => task.id} %>
-      <%= task.tittle %>
+      <%= task.title %>
       <%= link_to '[編集]',edit_task_path(task.id)%>
       <%= link_to '[削除]',
         task_path(task.id), 

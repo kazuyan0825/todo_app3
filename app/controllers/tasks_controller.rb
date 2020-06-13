@@ -46,6 +46,6 @@ class TasksController < ApplicationController
 
   private
     def task_params
-      params[:task].permit(:tittle)
+      params[:task].permit(:title)
     end
 end
