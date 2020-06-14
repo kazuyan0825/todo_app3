@@ -44,6 +44,9 @@ class TasksController < ApplicationController
     @task.save
   end
 
+  def todo
+  end
+
   private
     def task_params
       params[:task].permit(:title)
