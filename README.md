@@ -67,7 +67,7 @@ HTML/CSS,Ruby on Rails,JavaScript, MySQL, Git
 |nickname|string|null: false|
 ### Association
 - has_many :tasks
--
+
 
 ## taskテーブル
 |Column|Type|Options|
