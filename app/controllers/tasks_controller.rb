@@ -44,7 +44,7 @@ class TasksController < ApplicationController
     @task.save
   end
 
-  def todo
+  def show
   end
 
   private
