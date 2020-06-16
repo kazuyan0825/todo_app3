@@ -19,7 +19,7 @@ li {
 }
 
 .header-list li {
-  float: left;
+  float: right;
   padding: 33px 20px;
 }
 
@@ -61,32 +61,8 @@ li {
   margin-top: 30px;
 }
 
-.contact-form {
-  padding-top: 100px;
-}
-
-/* inputとtextareaのCSSを指定してください */
-.contact-form input{
-  width:400px;
-  margin-top:10px;
-  margin-bottom:30px;
-  padding:20px;
-  font-size:18px;
-  border:1px solid #dee7ec;
-}
-.contact-form textarea {
-  width:400px;
-  margin-top:10px;
-  margin-bottom:30px;
-  padding:20px;
-  font-size:18px;
-  border:1px solid #dee7ec;
-}
-
-/* contact-submitのCSSを指定してください */
-.contact-submit{
-  background-color:#dee7ec;
-  color:#889eab;
+.contact-form{
+  padding-top:100px;
 }
 
 .footer {

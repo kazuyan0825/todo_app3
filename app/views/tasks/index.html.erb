@@ -1,33 +1,74 @@
-<h1>ToDoアプリ</h1>
-<ul>
-  <% @tasks.each do |task| %>
-    <li>
-      <%= check_box_tag '','', task.done, {'data-id' => task.id} %>
-      <%= task.title %>
-      <%= link_to '[編集]',edit_task_path(task.id)%>
-      <%= link_to '[削除]',
-        task_path(task.id), 
-        method: :delete, 
-        data:{ confirm: '削除してもよろしいですか？'} %>
-    </li>
-  <% end %>
-</ul>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ToDoアプリ</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-logo">ToDoアプリ</div>
+      <div class="header-list">
+        <ul>
+          <li>ログアウト</li>
+          <li><%= link_to 'リストの作成', new_task_path %></li>
+          <li>kitagawa</li>
+        </ul>
+      </div>
+    </div>
 
-<%= link_to '新規追加', new_task_path %>
+    <div class="main">
+    <ul>
+      <% @tasks.each do |task| %>
+        <li>
+          <%= check_box_tag '','', task.done, {'data-id' => task.id} %>
+          <%= task.title %>
+          <%= link_to '[編集]',edit_task_path(task.id)%>
+          <%= link_to '[削除]',
+            task_path(task.id), 
+            method: :delete, 
+            data:{ confirm: '削除してもよろしいですか？'} %>
+        </li>
+      <% end %>
+    </ul>
 
-<script>
-  $(function(){
-    $("input[type=checkbox]").click(function(){
-      $.post('/tasks/' + $(this).data('id') + '/toggle');
-    }); 
-  });
-</script>
+    
+    <!--<%= link_to 'ページ一覧', tasks_show_path %> -->
 
- <div class="slick">
-    <div class="b"><img class="c" src="assets/6-la.jpg"></div>
-    <div class="b"><img class="c" src="assets/la.jpg"></div>
-    <div class="b"><img class="c" src="assets/V.jpg"></div>
-    <div class="b"><img class="c" src="assets/1.jpg"></div>
-    <div class="b"><img class="c" src="assets/2.jpg"></div>
-    <div class="b"><img class="c" src="assets/3.jpg"></div>
-</div>
+    <script>
+      $(function(){
+        $("input[type=checkbox]").click(function(){
+          $.post('/tasks/' + $(this).data('id') + '/toggle');
+        }); 
+      });
+    </script>
+    
+
+    <div class="contact-form">
+        <h3 class="section-title">お問い合わせ</h3>
+        <p>メールアドレス（必須）</p>
+        <!-- <input>要素を追加してください -->
+        <input>
+        
+        <p>お問い合わせ内容（必須）</p>
+        <!-- <textarea>要素を追加してください -->
+        <textarea></textarea>
+        
+        <p>※必須項目は必ずご入力ください</p>
+        <!-- <input>要素を追加してください -->
+        <input class="contact-submit" type="submit" value="送信">
+        
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-logo">ToDoアプリ</div>
+      <div class="footer-list">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
